@@ -1,3 +1,5 @@
+<?php include("connectSQL.php")?>
+<?php include("function.php"); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,9 +49,10 @@
             <div class="row menu">
                 <ul class="col-3">
                     <li><a class="menu-tab active" id="all">All</a></li>
+                    <li><a class="menu-tab" id="dish">Dish</a></li>
                     <li><a class="menu-tab" id="drink">Drink</a></li>
-                    <li><a class="menu-tab" id="lunch">Lunch</a></li>
-                    <li><a class="menu-tab" id="dinner">Dinner</a></li>
+                    <li><a class="menu-tab" id="combo">Combo</a></li>
+                    <li><a class="menu-tab" id="reser">Reservation</a></li>
                     <li class="search-form"><form>
                         <input type="text" id="search" placeholder="Search.....">
                         <button type="submit"><i class="fa fa-search"></i></button>
@@ -58,75 +61,96 @@
                 </ul>
                 <div class="col-9">
                     <div class="row">
+                     <!--Dish menu-->
+                         <ul>
+                            <?php
+                            $query = "select * from  product where category = 'Dish'";
+                            $result = mysqli_query($con, $query);
+                            while ($row = mysqli_fetch_object($result)) {
+                                ?>
+                                <li>
+                                    <a href="./product_details.php">
+                                        <div class="col-3 item-menu dish" style="background-image: url(<?php echo $row->image ?>);">
+                                            <div class="item-content">
+                                                <h1><?php echo $row->name ?></h1>
+                                                <p><?php echo $row->description ?></p>
+                                                <b><?php echo $row->price ?></b>
+                                                <b style = "font-size: 10px"><?php echo $row->currency_id ?></b>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
                     <!--Drink menu-->
-                        <div class="col-3 item-menu drink" style="background-image: url(images/drink1.jpg);">
-                                <div class="item-content">
-                                    <h1>Drink1</h1>
-                                    <p>Some decrible</p>
-                                    <b>$x.xx</b>
-                                </div>
-                                
-                        </div>
-                        <div class="col-3 item-menu drink" style="background-image: url(images/img-02.jpg);">
-                                <div class="item-content">
-                                    <h1>Drink2</h1>
-                                    <p>Some decrible</p>
-                                    <b>$x.xx</b>
-                                </div>  
-                        </div>
-                        
-                        <div class="col-3 item-menu drink" style="background-image: url(images/drink3.jpg);">
-                                <div class="item-content">
-                                    <h1>Drink3</h1>
-                                    <p>Some decrible</p>
-                                    <b>$x.xx</b>
-                                </div>    
-                        </div>
-                        <!--Lunch menu-->
-                        <div class="col-3 item-menu lunch" style="background-image: url(images/menu\ 1.jpg);">
-                            <div class="item-content">
-                                <h1>Lunch 1</h1>
-                                <p>Some decrible</p>
-                                <b>$x.xx</b>
-                            </div>    
-                        </div>
-                        <div class="col-3 item-menu lunch" style="background-image: url(images/menu\ 2.jpg);">
-                            <div class="item-content">
-                                <h1>Lunch 2</h1>
-                                <p>Some decrible</p>
-                                <b>$x.xx</b>
-                            </div>    
-                        </div>
-                        <div class="col-3 item-menu lunch" style="background-image: url(images/menu\ 4.jpg);">
-                            <div class="item-content">
-                                <h1>Lunch 2</h1>
-                                <p>Some decrible</p>
-                                <b>$x.xx</b>
-                            </div>    
-                        </div>
-                        <!-- dinner menu-->
-                        <div class="col-3 item-menu dinner" style="background-image: url(images/combo1.jpeg);">
-                            <div class="item-content">
-                                <h1>Dinner 1</h1>
-                                <p>Some decrible</p>
-                                <b>$x.xx</b>
-                            </div>    
-                        </div>
-                        <div class="col-3 item-menu dinner" style="background-image: url(images/img-08.jpg);">
-                            <div class="item-content">
-                                <h1>Dinner 2</h1>
-                                <p>Some decrible</p>
-                                <b>$x.xx</b>
-                            </div>    
-                        </div>
-                        <div class="col-3 item-menu dinner" style="background-image: url(images/combo2.jpg);">
-                            <div class="item-content">
-                                <h1>Dinner 3</h1>
-                                <p>Some decrible</p>
-                                <b>$x.xx</b>
-                            </div>    
-                        </div>
-                        </div>
+                        <ul>
+                            <?php
+                            $query = "select * from  product where category = 'Drink'";
+                            $result = mysqli_query($con, $query);
+                            while ($row = mysqli_fetch_object($result)) {
+                                ?>
+                                <li>
+                                    <div class="col-3 item-menu drink" style="background-image: url(<?php echo $row->image ?>);">
+                                        <div class="item-content">
+                                            <h1><?php echo $row->name ?></h1>
+                                            <p><?php echo $row->description ?></p>
+                                            <b><?php echo $row->price ?></b>
+                                            <b style = "font-size: 10px"><?php echo $row->currency_id ?></b>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+
+                    <!--Combo menu-->
+                         <ul>
+                            <?php
+                            $query = "select * from  product where category = 'Combo'";
+                            $result = mysqli_query($con, $query);
+                            while ($row = mysqli_fetch_object($result)) {
+                                ?>
+                                <li>
+                                    <div class="col-3 item-menu combo" style="background-image: url(<?php echo $row->image ?>);">
+                                        <div class="item-content">
+                                            <h1><?php echo $row->name ?></h1>
+                                            <p><?php echo $row->description ?></p>
+                                            <b><?php echo $row->price ?></b>
+                                            <b style = "font-size: 10px"><?php echo $row->currency_id ?></b>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+
+                    <!--Reservation menu-->
+                         <ul>
+                            <?php
+                            $query = "select * from  product where category = 'Reservation'";
+                            $result = mysqli_query($con, $query);
+                            while ($row = mysqli_fetch_object($result)) {
+                                ?>
+                                <li>
+                                    <div class="col-3 item-menu reser" style="background-image: url(<?php echo $row->image ?>);">
+                                        <div class="item-content">
+                                            <h1><?php echo $row->name ?></h1>
+                                            <p><?php echo $row->description ?></p>
+                                            <b><?php echo $row->price ?></b>
+                                            <b style = "font-size: 10px"><?php echo $row->currency_id ?></b>
+                                        </div>
+                                    </div>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+                    </div>
+            
                 </div>
             </div>
         </div>

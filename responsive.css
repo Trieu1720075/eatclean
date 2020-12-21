@@ -1,0 +1,148 @@
+@media screen and (max-width: 1348px){
+	.owl-theme .owl-controls .owl-nav .owl-next	{
+		right:-5px;
+	}
+	.owl-theme .owl-controls .owl-nav .owl-prev	{
+		left:-5px;
+	}
+}
+
+@media screen and (max-width: 1200px){
+	.tr_mobile	{
+	  display:block!important;
+	}
+	.tr_pc	{
+	  display:none!important;
+	}
+	.main	{
+		width:100%;
+	}
+	.container, .d_container{
+		width:100%;
+		padding: 0 10px;
+	}
+	img{
+		max-width:100%;
+	}
+	.segment_top_left{
+		display: none;
+	}
+	.d_category{
+		display: none;
+	}
+	.d_promotion{
+		width: 100%;
+		float: none;
+	}
+	
+	.u_footer_company, .u_footer_info, .u_footer_sub, .u_footer_connect{
+		margin-left: 0;
+		text-align: center;
+		float: none;
+		width: 100%;
+	}
+	.u_footer_email,.d_circle_social{
+		display: inline-block;
+	}
+	.partner_search{
+		float: none;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.partner_product{
+		float: none;
+		width: 100%;
+	}
+	.d_promotion{
+		margin-left: 0;
+	}
+	.d_product.no_owl ul li{
+		width: 32.33%;
+	}
+	.d_product.no_owl ul li:nth-child(4n+1){
+		margin-left: 1.5%;
+	}
+	.d_product.no_owl ul li:nth-child(3n+1){
+		margin-left: 0;
+	}
+	
+	.d_admin_right{
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	.partner_product{
+		margin-left: 0;
+	}
+	.mod_head{
+		margin-bottom: 0;
+	}
+	.fa.fa-search.m_button{
+		margin-left: 20px;
+	}
+	.fb-page, .fb-page span, .fb-page span iframe[style] {
+		width: 300px !important;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.d_product.no_owl ul li{
+		width: 49.25%;
+	}
+
+	.d_product.no_owl ul li:nth-child(3n+1){
+		margin-left: 1.5%;
+	}
+	
+	.d_product.no_owl ul li:nth-child(2n+1){
+		margin-left: 0;
+	}
+
+
+	.details_pro_img{
+		width: 100%;
+		float: none;
+	}
+	.details_pro_text{
+		width: 100%;
+		float: none;
+		margin-top: 40px;
+	}
+	.details_pro_img .owl-controls{
+		display: none;
+	}
+	.sp_name {
+		min-height: 40px;
+	}
+}
+
+@media screen and (max-width: 600px){
+
+}	 
+
+@media screen and (max-width: 480px){
+	.d_product.no_owl ul li{
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 40px;
+	}
+
+
+	.d_product.no_owl ul li:nth-child(3n+1){
+		margin-left: 0;
+	}
+	.d_image img{
+		height: auto;
+	}
+	.sp_name {
+		min-height: auto;
+	}
+}
+
+@media screen and (max-width: 360px){
+    
+}
+
+@media screen and (max-width: 240px){
+    
+}
