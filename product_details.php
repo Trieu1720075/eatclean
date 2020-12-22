@@ -1,20 +1,20 @@
+<?php include("connectSQL.php")?>
+<?php include("function.php"); ?>
 <!DOCTYPE html>
-<html lang="vi">
-
-<head>
-    <meta charset="utf-8">
-    <title>EatClean</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link type="text/css" rel="stylesheet" href="t_pro_detail.css">
-    <link rel="stylesheet" href="style.css" />
-</head>
-
-
-<body>
-    <header>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>EatClean</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <header>
             <nav>
                 <div class="col-1"><a href="index.php"><img src="images/0.png" alt="logo"
                             style="width: 5em; height: 5em;margin-left: 20px;"></a> </div>
@@ -35,171 +35,103 @@
                     </ul>
                 </div>
             </nav>
-    </header>
-    <div class="d_segment_pro_details" id = "abc">
-        <div class="container">
-            <div class="d_title">
-                <div class="title_text">Kinh Nghiệm thành công của ông chủ nhỏ</div>
-                <div class="clear"></div>
+        </header>
+        <div id="behind">
+        </div>
+
+        
+        <div class="page-title">
+            <h1>Food and Drink Menu</h1>
+        </div>
+
+        <div class="row" style="width:80%;margin:auto">
+            <div class="col-6">
+                <h3  style="color: white">Welcome to <span style="color: rgb(0, 255, 55)">EATCLEAN</span>
+                </h3>
+                <p style="color: white">Name:<span style="color: rgb(0, 255, 55)"> Chicken deep-fry </span> </p>
+                <p style="color: white">Price:<span style="color: rgb(0, 255, 55)"> 20 USD </span> </p>
+                <p style="color: white">Description: </p>
+
+                <p style="color: white">The menu offers a wide variety of mouth-watering starters. I had the white asparagus accompanied by
+                    a mousseline sauce and poached eggs, while my friend tried the zucchini carpaccio served with
+                    sundries tomatoes and a mozzarella strudel. They were exquisite. The main course consisted in a
+                    risotto with scallop cooked in cream and a cassolette of coley with mussels, which really thrilled
+                    us. It all was followed by a delicious apple pie served with a scoop of vanilla ice cream for
+                    dessert.</p>
+                <button style="background: rgb(0, 255, 55); color: white"href="#">ADD TO CART </button>
             </div>
-            <div class="d_main_product">
-                <div class="sum_pro">
-                    <div class="details_pro_img">
-                        <div class="slider-container">
-                            <!--Main Slider Start-->
-                            <div id="slider" class="slider owl-carousel">
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Main Slider End-->
+            <div class="col-6" id="img">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
 
-                            <!--Navigation Links For the Main Items-->
-                            <div class="slider-controls">
-                                <a class="slider-left" href="javascript:;"><span><i
-                                            class="fa fa-2x fa-chevron-left"></i></span></a>
-                                <a class="slider-right" href="javascript:;"><span><i
-                                            class="fa fa-2x fa-chevron-right"></i></span></a>
-                            </div>
-                        </div>
-                        <!--Thumbnail slider container-->
-                        <!-- Copyright 2019 mtilove VBD -->
-
-                        <div class="thumbnail-slider-container">
-                            <!--Thumbnail Slider Start-->
-                            <div id="thumbnailSlider" class="thumbnail-slider owl-carousel">
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="content">
-                                        <img alt="" src="img/ban_do_may.jpg" />
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Thumbnail Slider End-->
-                        </div>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/img-01.jpg" alt="Los Angeles" style="width:100%;">
                     </div>
-                    <div class="details_pro_text">
-                        <h1>Kinh nghiệm thành công của ông chủ nhỏ</h1>
-                        <div class="pro_code">
-                            <div class="prod_pri"><b>Tác giả: </b><a href="#" style="color: #337AB7;">Lão Mạc</a><br />
-                            </div>
-                            <div class="prod_pri"><b>Thể Loại: </b><a href="#" style="color: #337AB7;">Kinh tế - Quản
-                                    lý</a><br /></div>
-                            <div class="prod_pri"><b>Người upload: </b><a href="#"
-                                    style="color: #337AB7;">rooney</a><br /></div>
-                            <div class="prod_pri"><b>Mã sách: </b>16<br /></div>
-                            <div class="prod_pri"><b>Lượt xem: </b>9000000<br /></div>
-                        </div>
-                        <div class="depro_sum">
-                            Kinh Nghiệm Thành Công Của Ông Chủ Nhỏ là một cuốn sách có nội dung khác biệt với những cuốn
-                            sách kinh doanh thông thường khác, có thể sẽ giúp ích được cho những bạn trẻ đã và đang dấn
-                            thân vào lĩnh vực kinh doanh. Trong cuốn sách này, trước tiên, tác giả nêu ra tình huống,
-                            sau đó đi sâu phân tích, đưa ra những luận điểm về những tình tiết quan trọng trong câu
-                            chuyện và đề cập tới những lĩnh vực có thể ứng dụng luận điểm đó. Những câu chuyện mà tác
-                            giả viết ra không được phân loại theo phương thức quản lí kinh doanh mà dựa theo đặc điểm
-                            cách làm của doanh nghiệp. Và đặc biệt, đó không phải là những câu chuyện quen thuộc từng
-                            được đề cập trong giáo trình thương mại, mà phần lớn là những điều tâm đắc và những trải
-                            nghiệm của chính tác giả.
-                            <br>
-                            Cuốn sách này không đơn thuần là chuyện bán bánh nướng, bán chân giò xông khói... thế nào
-                            cho đắt hàng như nhiều người thoạt tưởng. Thực ra nó là chuyện lên kế hoạch và thực hiện
-                            chiến lược để có thể khống chế được cục diện, vừa phát triển nghể, vừa hạn chế được đối thủ
-                            cạnh tranh của một ông chủ.Vì vậy, cuốn sách không chỉ có ích cho những người làm kinh doanh
-                            nhỏ, mà còn hữu ích với cả những ông chủ lớn.
-                        </div>
-                        <div class="pro_detail_b">
-                            <div class="pro_detail_b_row">
-                                <div class="btn_download"><a href="./product_details_reader.html"><i
-                                            aria-hidden="true"></i>Đọc
-                                        online</a></div>
-                            </div>
-                            <div class="pro_detail_b_row">
-                                <div><button type="submit" name="read_now"
-                                        class="pro_detail_button pro_detail_button2"><i aria-hidden="true"></i>Thêm vào
-                                        Danh sách yêu thích</button></div>
-                            </div>
-                            <div class="pro_detail_b_row">
-                                <div class="btn_download">
-                                    <a href="https://sachvui.com/sachvui-686868666888/ebooks/2019/pdf/Sachvui.Com-kinh-nghiem-thanh-cong-cua-ong-chu-nho-lao-mac.pdf"><i aria-hidden="true"></i>Tải xuống</a></div>
-                            </div>
-                        </div>
+
+                    <div class="item">
+                        <img src="images/img-02.jpg" alt="Chicago" style="width:100%;">
                     </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div class="pro_comment">
-                <div class="d_title">
-                    <div class="title_text">Bình luận</div>
-                    <div class="clear"></div>
-                </div>
-                <div class="comment_form">
-                    <form method="POST">
-                        <div class="create_cmt">
-                            <textarea placeholder="Viết bình luận" name="cmt_content"></textarea>
-                            <button type="submit" name="btn_comment">Gửi</button>
-                        </div>
-                    </form>
-                </div>
+                    
+                    <div class="item">
+                        <img src="images/img-03.jpg" alt="New york" style="width:100%;">
+                    </div>
+                    </div>
 
-
-
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
 
             </div>
+        </div>
+    
 
-</body>
 
-<footer>
+        <div id="qt">
+            <h3>" If you're not the one cooking, stay out of the way and compliment the chef. "</h3>
+            <h4>Michael Strahan</h4>
+        </div>
+        <div id="review">
+            <h1>Customer Review</h1>
+            <div class="view active" id="review1">
+                <i class="fa fa-commenting-o" class="col-12"></i>
+                <h3>STEVE FONSI</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p> 
+            </div>
+            <div class="view" id="review1">
+                <i class="fa fa-commenting-o" class="col-12"></i>
+                <h3>STEVE FONSI</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p> 
+            </div> 
+            <div class="view" id="review1">
+                <i class="fa fa-commenting-o" class="col-12"></i>
+                <h3>STEVE FONSI</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p> 
+            </div>
+            <div id="control" class="row">
+                <div class="col-6" id="prev-btn-div">
+                    <button id="prev-btn"><i class="fa fa-arrow-left"></i></button>
+                </div>
+                <div class="col-6" id="next-btn-div">
+                    <button id="next-btn"><i class="fa fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
         <div class="footer-content">
             <div class="row">
                 <div class="col-4">
